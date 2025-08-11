@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Simulador de Vulnerabilidades</title>
+  <script src="https://unpkg.com/cytoscape/dist/cytoscape.min.js"></script>
+</head>
+<body>
+  <h1>Visualização de Rede</h1>
+  <div id="cy" style="width: 800px; height: 600px; border: 1px solid #ccc;"></div>
+  <script>
+    var cy = cytoscape({
+      container: document.getElementById('cy'),
+      elements: [
+        { data: { id: 'a' } },
+        { data: { id: 'b' } },
+        { data: { id: 'ab', source: 'a', target: 'b' } }
+      ],
+      style: [
+        { selector: 'node', style: { 'background-color': '#666', 'label': 'data(id)' } },
+        { selector: 'edge', style: { 'width': 3, 'line-color': '#ccc' } }
+      ],
+      layout: { name: 'grid' }
+    });
+  </script>
+</body>
+</html>
