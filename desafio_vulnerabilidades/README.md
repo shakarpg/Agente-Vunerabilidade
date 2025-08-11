@@ -17,8 +17,3 @@ uvicorn app.main:app --reload
 ```
 
 Acesse em: `http://127.0.0.1:8000`
-
-## Objetivos
-- Criar ambiente seguro para estudo de vulnerabilidades.
-- Documentar processos técnicos.
-- Publicar no GitHub.
